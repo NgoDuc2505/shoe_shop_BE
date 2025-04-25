@@ -1,3 +1,5 @@
+import {copyRight} from "./utils.js";
+
 
 const successResponse = (res, data, msg="Request was successful") => {
     return res.status(200).json({
@@ -5,6 +7,7 @@ const successResponse = (res, data, msg="Request was successful") => {
         statusCode: 200,
         data,
         msg,
+        copyRight
     });
 }
 
@@ -14,6 +17,7 @@ const errorResponse = (res, error, msg="Request failed") => {
         statusCode: 500,
         error,
         msg,
+        copyRight
     });
 }
 
@@ -22,6 +26,7 @@ const notFoundResponse = (res, msg="Resource not found") => {
         status: "error",
         statusCode: 404,
         msg,
+        copyRight
     });
 }
 
@@ -30,6 +35,7 @@ const invalidData = (res, msg="Invalid data") => {
         status: "error",
         statusCode: 400,
         msg,
+        copyRight
     });
 }
 

@@ -3,4 +3,6 @@ const logRoute = (baseRoute, endpoint) => {
     console.log(`Route: ${fullRoute}`);
 }
 
-export {logRoute}
+const copyRight = "© Ngo Minh Duc, Tran Quoc Si, Dang Van Rin, Ngo Van Bao An - VKU - Shoeshop API";
+
+export {logRoute, copyRight}
