@@ -11,7 +11,7 @@ export const getShoeList = async (req, res) => {
     try {
       return await db.collection(process.env.DB_SHOE_COLLECTION).find().toArray();
     } catch (error) {
-      res.status(500).json({ error: "Error fetching shoes" });
+      return res.status(500).json({ error: "Error fetching shoes" });
     }
 }
 
@@ -21,6 +21,6 @@ export const addNewShoe = async (req, res) => {
         const result = await db.collection(process.env.DB_SHOE_COLLECTION).insertOne(newShoe);
         return result;
     }catch(error){
-        res.status(500).json({ error: "Error adding shoe" });
+        return res.status(500).json({ error: "Error adding shoe" });
     }
 }
