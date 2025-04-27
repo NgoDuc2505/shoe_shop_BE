@@ -1,9 +1,11 @@
 
 import express from "express";
 import dotenv from "dotenv";
-import shoeRouter from "./routes/route.shoe.js";
+import shoeRouter, {routeList} from "./routes/route.shoe.js";
 import brandRouter from "./routes/route.brand.js";
 import cors from "cors";
+import { saveRoutesToFile } from "./config/utils.js";
+
 
 dotenv.config();
 
@@ -32,6 +34,9 @@ app.use(process.env.SHOE_BASE_URL, brandRouter);
 // });
 
 const port = process.env.PORT || 3000;
+
+saveRoutesToFile(routeList, "shoe_api.txt");
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

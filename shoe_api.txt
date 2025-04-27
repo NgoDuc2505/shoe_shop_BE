@@ -1,0 +1,11 @@
+GET: http://localhost:8080/api/shoe/get-shoe-list <====> GET: https://shoe-shop-be.onrender.com/api/shoe/get-shoe-list
+POST: http://localhost:8080/api/shoe/add-shoe <====> POST: https://shoe-shop-be.onrender.com/api/shoe/add-shoe
+GET: http://localhost:8080/api/shoe/get-brand-list <====> GET: https://shoe-shop-be.onrender.com/api/shoe/get-brand-list
+GET: http://localhost:8080/api/shoe/get-shoe-by-brand/:brandName <====> GET: https://shoe-shop-be.onrender.com/api/shoe/get-shoe-by-brand/:brandName
+GET: http://localhost:8080/api/shoe/get-shoe-by-id/:id <====> GET: https://shoe-shop-be.onrender.com/api/shoe/get-shoe-by-id/:id
+GET: http://localhost:8080/api/shoe/get-shoe-by-name/:name <====> GET: https://shoe-shop-be.onrender.com/api/shoe/get-shoe-by-name/:name
+GET: http://localhost:8080/api/shoe/get-category-list <====> GET: https://shoe-shop-be.onrender.com/api/shoe/get-category-list
+GET: http://localhost:8080/api/shoe/get-shoe-by-category/:categoryName <====> GET: https://shoe-shop-be.onrender.com/api/shoe/get-shoe-by-category/:categoryName
+DELETE: http://localhost:8080/api/shoe/delete-shoe/:id <====> DELETE: https://shoe-shop-be.onrender.com/api/shoe/delete-shoe/:id
+GET: http://localhost:8080/api/shoe/get-delete-shoe-list <====> GET: https://shoe-shop-be.onrender.com/api/shoe/get-delete-shoe-list
+PUT: http://localhost:8080/api/shoe/update-shoe/:id <====> PUT: https://shoe-shop-be.onrender.com/api/shoe/update-shoe/:id
