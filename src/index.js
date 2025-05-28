@@ -1,12 +1,10 @@
-
 import express from "express";
 import dotenv from "dotenv";
-import shoeRouter, {routeList} from "./routes/route.shoe.js";
+import shoeRouter, { routeList } from "./routes/route.shoe.js";
 import brandRouter from "./routes/route.brand.js";
 import cors from "cors";
-import { saveRoutesToFile } from "./config/utils.js";
-
-
+import { saveRoutesToFile, saveRoutesToFileBetterCustom } from "./config/utils.js";
+import userRouter, { routeListUser } from "./routes/route.user.js";
 dotenv.config();
 
 const app = express();
@@ -15,9 +13,7 @@ app.use(cors());
 
 app.use(process.env.SHOE_BASE_URL, shoeRouter);
 app.use(process.env.SHOE_BASE_URL, brandRouter);
-
-
-
+app.use(process.env.USER_BASE_URL, userRouter);
 
 // // DELETE: Xóa một shoe theo id (dùng field 'id' trong JSON)
 // app.delete("/shoes/:id", async (req, res) => {
@@ -35,7 +31,8 @@ app.use(process.env.SHOE_BASE_URL, brandRouter);
 
 const port = process.env.PORT || 3000;
 
-saveRoutesToFile(routeList, "shoe_api.txt");
+saveRoutesToFile([...routeList, ...routeListUser], "shoe_api.txt");
+
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

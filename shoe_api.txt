@@ -1,3 +1,4 @@
+====SHOE API====
 GET: http://localhost:8080/api/shoe/get-shoe-list <====> GET: https://shoe-shop-be.onrender.com/api/shoe/get-shoe-list
 POST: http://localhost:8080/api/shoe/add-shoe <====> POST: https://shoe-shop-be.onrender.com/api/shoe/add-shoe
 GET: http://localhost:8080/api/shoe/get-brand-list <====> GET: https://shoe-shop-be.onrender.com/api/shoe/get-brand-list
@@ -9,3 +10,10 @@ GET: http://localhost:8080/api/shoe/get-shoe-by-category/:categoryName <====> GE
 DELETE: http://localhost:8080/api/shoe/delete-shoe/:id <====> DELETE: https://shoe-shop-be.onrender.com/api/shoe/delete-shoe/:id
 GET: http://localhost:8080/api/shoe/get-delete-shoe-list <====> GET: https://shoe-shop-be.onrender.com/api/shoe/get-delete-shoe-list
 PUT: http://localhost:8080/api/shoe/update-shoe/:id <====> PUT: https://shoe-shop-be.onrender.com/api/shoe/update-shoe/:id
+====USER API====
+GET: http://localhost:8080/api/user/get-user-list <====> GET: https://shoe-shop-be.onrender.com/api/user/get-user-list
+GET: http://localhost:8080/api/user/verify-email/:token <====> GET: https://shoe-shop-be.onrender.com/api/user/verify-email/:token
+POST: http://localhost:8080/api/user/sign-in <====> POST: https://shoe-shop-be.onrender.com/api/user/sign-in
+POST: http://localhost:8080/api/user/login <====> POST: https://shoe-shop-be.onrender.com/api/user/login
+POST: http://localhost:8080/api/user/order-history <====> POST: https://shoe-shop-be.onrender.com/api/user/order-history
+GET: http://localhost:8080/api/user/get-order-user/:userId <====> GET: https://shoe-shop-be.onrender.com/api/user/get-order-user/:userId
