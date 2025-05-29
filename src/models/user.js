@@ -209,11 +209,25 @@ const userOrderHistory = async (req, res) => {
       return { user: null, error: "User not found" };
     }
 
+    if(user.address.length === 0){
+      return { user: null, error: "User not have any address" };
+    }
+
+    const defaultAddress = user.address.find(address => {
+      if(address.isDefault){
+        return address;
+      }else{
+        return user.address[0];
+      }
+    });
+
     const newOrder = {
       orderList,
       totalPrice: total,
       userId: user._id,
       dayCreated: new Date(),
+      status: false,
+      address: defaultAddress,
     };
 
     // await db

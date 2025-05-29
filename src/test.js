@@ -394,4 +394,39 @@ const test_order_from_user = ()=>{
   })
 }
 
+const test_order_from_user_2 = ()=>{
+  test_order_from_user_API({
+    userId: userId,
+    orderList: [
+      {
+        shoeId: "680c98cb68dce55ebcaa01dd",
+        quantity: 2,
+        name: "Nike Force 1 Low EasyOn",
+        price: 100,
+        color: ["black"],
+        size: [40],
+      }
+    ]
+  })
+}
+
 test_order_from_user()
+
+
+const login2 = async (data) => {
+  fetch("https://shoe-shop-be.onrender.com/api/user/login",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log("Success:", data))
+    .catch((error) => console.error("Error:", error));
+}
+
+// login2({
+//     email: "ngominhduc202@gmail.com",
+//     password: "25052002Duc#"
+//   })
